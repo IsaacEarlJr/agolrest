@@ -281,7 +281,7 @@ graphicsLayer.add(polylineGraphic);
 
         const newPointLayerSymbol = {
   type: "simple-marker",
-  size: "1px", // Adjust this to change the size of the icons
+  size: "3px", // Adjust this to change the size of the icons
   color: [255, 255, 255],  // White
   outline: {
     color: [0, 0, 0], // Black
@@ -298,7 +298,8 @@ graphicsLayer.add(polylineGraphic);
 const newPointLayer = new FeatureLayer({
   url: "https://services.arcgis.com/0L95CJ0VTaxqcmED/arcgis/rest/services/pard_facility_points/FeatureServer",
   outFields: ["PARK_NAME", "ADDRESS", "ASSET_TYPE"],
-popupTemplate: newPointLayerPopup
+popupTemplate: newPointLayerPopup,
+renderer: newPointLayerSymbol
 
 });
 
