@@ -101,8 +101,11 @@ const polyline = {
   type: "polyline",
   paths: [
     // Add the coordinates of the campus boundary here
-    // For example: 
-   
+    // thank you GEOJASON.IO aka MAPBOX FOR THE COORDINATES!!!
+    [
+            -97.74213811452034,
+            30.28192462303491
+          ],
     [
             -97.74211052642318,
             30.281829327666728
@@ -212,7 +215,7 @@ graphicsLayer.add(polylineGraphic);
          // Define a pop-up for usaeduLayer
          const popupEduusa = {
             "title": "EDUs",
-            "content": "<b>Name:</b> {NAME}<br><b>Total Enrollment:</b> {TOT_ENROLL}<br>"
+            "content": "<b>Name:</b> {INSTNM}<br><b>Total Enrollment:</b> {INSTSIZE}<br>"
         }
 
          //adding the const for the feature layer
