@@ -278,6 +278,16 @@ graphicsLayer.add(polylineGraphic);
         //adding the feature layer to the map
         map.add(airportLayer);
 
+
+const newPointLayer = new FeatureLayer({
+  url: "https://services.arcgis.com/0L95CJ0VTaxqcmED/arcgis/rest/services/pard_facility_points/FeatureServer",
+  outFields: ["*"], // Adjust this to include the fields you need
+});
+
+map.add(newPointLayer);
+
+
+
     });
   </script>
 
