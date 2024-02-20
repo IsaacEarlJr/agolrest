@@ -46,15 +46,16 @@
         map.add(graphicsLayer);
 
         //defining the geomeotry of the point
-        const cross = { //Create a point
+        const point = { //Create a point
           type: "point",
-          longitude: -97.7325,    //long lat of stadium
+          longitude: -97.7325,    //long lat of SLonghorns stadium
           latitude: 30.2835 
         };
         
         //defining the maker style
         const simpleMarkerSymbol = {
           type: "simple-marker",
+          style: "x" //changed the style from default to x
           color: [255, 255, 255],  // White
           outline: {
             color: [255, 70, 0], // Longhorn Orange
@@ -74,7 +75,7 @@
 
         //creating the point
         const pointGraphic = new Graphic({
-          geometry: cross,
+          geometry: point,
           symbol: simpleMarkerSymbol,
 
           //adding popup properites
