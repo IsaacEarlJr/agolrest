@@ -279,16 +279,8 @@ graphicsLayer.add(polylineGraphic);
         map.add(airportLayer);
 
 
-        const newPointLayerSymbol = {
-  type: "simple-marker",
-  size: "3px", // Adjust this to change the size of the icons
-  color: [255, 255, 255],  // White
-  outline: {
-    color: [0, 0, 0], // Black
-    width: 1
-  }
-};
 
+        
         const newPointLayerPopup = {
   "title": "{PARK_NAME}",
   "content": "<b>Address:</b> {ADDRESS}<br><b>Asset Type:</b> {ASSET_TYPE}"
@@ -299,7 +291,7 @@ const newPointLayer = new FeatureLayer({
   url: "https://services.arcgis.com/0L95CJ0VTaxqcmED/arcgis/rest/services/pard_facility_points/FeatureServer",
   outFields: ["PARK_NAME", "ADDRESS", "ASSET_TYPE"],
 popupTemplate: newPointLayerPopup,
-renderer: newPointLayerSymbol
+definitionExpression: "APP_CATEGORY = 'Recreation'"
 
 });
 
