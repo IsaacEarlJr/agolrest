@@ -93,6 +93,48 @@
          //adding the point to the graphicsLayer
          graphicsLayer.add(pointGraphic);
 
+
+
+
+// Define the polyline geometry for UT campus boundary
+const polyline = {
+  type: "polyline",
+  paths: [
+    // Add the coordinates of the campus boundary here
+    // For example: 
+    [-97.7325, 30.2835],
+    [-97.7326, 30.2836],
+    // ...
+  ]
+};
+
+// Define the line symbol
+const lineSymbol = {
+  type: "simple-line",
+  color: [255, 70, 0], // Longhorn Orange
+  width: 2
+};
+
+// Create the polyline graphic
+const polylineGraphic = new Graphic({
+  geometry: polyline,
+  symbol: lineSymbol
+});
+
+// Add the polyline to the graphicsLayer
+graphicsLayer.add(polylineGraphic);
+
+
+
+
+
+
+
+
+
+
+
+
          // Define a pop-up for usaeduLayer
          const popupEduusa = {
             "title": "EDUs",
