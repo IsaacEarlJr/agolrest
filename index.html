@@ -279,6 +279,12 @@ graphicsLayer.add(polylineGraphic);
         map.add(airportLayer);
 
 
+        const newPointLayerPopup = {
+  "title": "{PARK_NAME}",
+  "content": "<b>Address:</b> {ADDRESS}<br><b>Asset Type:</b> {ASSET_TYPE}"
+};
+
+
 const newPointLayer = new FeatureLayer({
   url: "https://services.arcgis.com/0L95CJ0VTaxqcmED/arcgis/rest/services/pard_facility_points/FeatureServer",
   outFields: ["PARK_NAME", "ADDRESS", "ASSET_TYPE"],
