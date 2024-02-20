@@ -218,13 +218,30 @@ graphicsLayer.add(polylineGraphic);
         "content": "<b>Name:</b> {INSTNM}<br><b>Address:</b> {ADDR}<br><b>Total Enrollment:</b> {INSTSIZE}<br><b>Highest level of offering:</b> {HLOFFER}<br><b>Website:</b> {WEBADDR}"
 };
 
+const usaeduLayerSymbol = {
+  type: "simple-marker",
+  size: "10px",
+  color: [255, 0, 0],  // Bright red
+  outline: {
+    color: [255, 255, 0], // Yellow
+    width: 1
+  }
+};
+
+const usaeduLayerRenderer = {
+  type: "simple",
+  symbol: usaeduLayerSymbol
+};
+
          //adding the const for the feature layer
          const usaeduLayer = new FeatureLayer({
           url: "https://services2.arcgis.com/FiaPA4ga0iQKduv3/arcgis/rest/services/Colleges_and_Universities_View/FeatureServer",
 
           //adding the popup here
           outFields: ["INSTNM","ADDR","INSTSIZE","HLOFFER","WEBADDR"],
-          popupTemplate: popupEduusa
+          popupTemplate: popupEduusa,
+          renderer: usaeduLayerRenderer
+
         });
 
         //adding the feature layer to the map
