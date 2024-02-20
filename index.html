@@ -288,6 +288,7 @@ graphicsLayer.add(polylineGraphic);
 const newPointLayer = new FeatureLayer({
   url: "https://services.arcgis.com/0L95CJ0VTaxqcmED/arcgis/rest/services/pard_facility_points/FeatureServer",
   outFields: ["PARK_NAME", "ADDRESS", "ASSET_TYPE"],
+popupTemplate: newPointLayerPopup
 
 });
 
