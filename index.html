@@ -214,16 +214,16 @@ graphicsLayer.add(polylineGraphic);
 
          // Define a pop-up for usaeduLayer
          const popupEduusa = {
-            "title": "EDUs",
-            "content": "<b>Name:</b> {INSTNM}<br><b>Total Enrollment:</b> {INSTSIZE}<br> <b>Highest level of offering:</b> {HLOFFER}"
-        }
+        "title": "EDUs",
+        "content": "<b>Name:</b> {INSTNM}<br><b>Total Enrollment:</b> {INSTSIZE}<br><b>Highest level of offering:</b> {HLOFFER}<br><b>Alias:</b> {IALIAS}<br><b>Website:</b> {WEBADDR}"
+};
 
          //adding the const for the feature layer
          const usaeduLayer = new FeatureLayer({
           url: "https://services2.arcgis.com/FiaPA4ga0iQKduv3/arcgis/rest/services/Colleges_and_Universities_View/FeatureServer",
 
           //adding the popup here
-          outFields: ["INSTNM","INSTSIZE","HLOFFER"],
+          outFields: ["INSTNM","IALIAS","INSTSIZE","HLOFFER","WEBADDR"],
           popupTemplate: popupEduusa
         });
 
